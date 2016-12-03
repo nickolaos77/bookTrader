@@ -1,0 +1,15 @@
+1. git init
+2. create the .gitignore file
+3. git add .
+4. git commit -am "Initial Commit"
+5. go and create an empty repository at github
+6. git remote add origin https://github.com/nickolaos77/volvoSpecialist.git
+7. git push -u origin master
+8. Heroku create
+9. heroku apps:rename newname
+10.git push heroku master
+11.to remove files that you added by accident before commiting them: git reset
+12.
+
+
+and then git commit, git push and git push heroku

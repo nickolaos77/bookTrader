@@ -1,0 +1,20 @@
+{
+  "name": "bookclub",
+  "authors": [
+    "Nick Papasavvas <nikospapasavvas@gmail.com>"
+  ],
+  "description": "A book trading club app built for FreeCodeCamp",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
