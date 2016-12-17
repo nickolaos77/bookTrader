@@ -1,0 +1,26 @@
+html {
+    height:100%;
+}
+body {
+    position:relative;
+    height:100%;
+}
+
+.jumbo{
+    margin-top:50px;
+    padding-top:15px;
+    padding-bottom:15px;
+    background:#4393B9;
+}
+.jumbo h1, p, i {
+    color:#e7e7e7;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+
+

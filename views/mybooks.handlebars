@@ -1,0 +1,46 @@
+{{#section 'Menu'}} 
+        {{> logoutMenu}}
+{{/section}}
+
+<div class='container' style='margin-top:100px'>
+    <div >    
+<ul class="nav nav-tabs" role = 'tablist'>
+  <li role="presentation" class="active"><a href="#yourTrReq" aria-controls='yourTrReq' role='tab' data-toggle='tab'>Your trade requests</a></li>
+  <li role="presentation"><a href="#trReq4u" aria-controls='trReq4u' role='tab' data-toggle='tab' >Trade requests for you</a></li>
+</ul>
+  <!-- Tab panes -->
+  <div class="tab-content" style='margin-top:30px; margin-left:20px'>
+    <div role="tabpanel" class="tab-pane active" id="yourTrReq">
+        {{#each booksRequestedByUser}}
+        <div style= 'display:inline-block; '>
+                <img class='img img-responsive' src='{{image}}' style='margin-bottom:10px'> 
+       </div>
+        {{/each}}
+    </div>
+    <div role="tabpanel" class="tab-pane" id="trReq4u">
+        {{#each booksRequestedFromUser}}
+        <div style= 'display:inline-block; '>
+                <img class='img img-responsive' src='{{image}}' style='margin-bottom:10px'> 
+                <button class='btn btn-success' id = 'A/{{_id}}'> Accept</button>
+                <button class='btn btn-danger'  id = 'R/{{_id}}'> Reject</button>
+       </div>
+        {{/each}}
+      </div>
+  </div>
+</div>  
+    <hr>
+    <form class="form-inline" action='/mybooks' method='POST' style='margin-bottom:10px'>
+        <div class="form-group">
+            <input type="text" class="form-control" name='book' placeholder="Add book">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+        {{#each userBooks}}
+        <div style= 'display:inline-block; border:2px solid lightgrey;'>
+            <a href='{{link}}' >
+                <i class="fa fa-times" aria-hidden="true" style='color:black'> </i><img class='img img-responsive' src='{{image}}' > 
+            </a>
+        </div>
+        {{/each}}
+    
+</div>

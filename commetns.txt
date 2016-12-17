@@ -1,1 +1,0 @@
-1. which should be the starting point entered inside the bower.json

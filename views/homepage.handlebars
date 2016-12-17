@@ -1,13 +1,46 @@
-    <div class="container">
+{{#section 'Menu'}} 
+    {{#if logoutMenu}}
+        {{> logoutMenu}} 
+    {{else}}
+        {{> loginMenu}}
+    {{/if}}
+{{/section}}
+
+
+<section class="container-fluid ">
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+      <div class="jumbo text-center">
+        <h1 >bookTrader</h1>
+        <p>The first rule of bookTrader is don't talk about bookTrader.</p>
+        <i class='fa fa-leaf fa-5x'></i> 
       </div>
 
-    </div> <!-- /container -->
+   
+    
+    
+        <div class='row '> 
+            <div class='col-xs-12'><h1> Features</h1> </div>
+        </div>
+        <div class='row  '>
+            <div class='col-xs-12 col-sm-3'>
+                <a href=''>Catalogue your books online</a>
+            </div>
+            <div class='col-xs-12 col-sm-3'>
+                <a href=''>See all of the books our users own</a>
+            </div>
+            <div class='col-xs-12 col-sm-3'>
+                <a href=''>Request to borrow other user's books</a>
+            </div>
+            <div class='col-xs-12 col-sm-3'>
+                <a href=''>Easily manage books and request from your dashboard</a>
+            </div>
+        </div>
+    </section> <!-- /container -->
+   
+    <footer class='footer'>
+        <div class='container-fluid text-center'>
+            <a href=''>helo</a>
+        </div>
+    </footer>
+

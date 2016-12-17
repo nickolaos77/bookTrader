@@ -16,55 +16,29 @@
     <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/navbar-fixed-top.css" rel="stylesheet">
-
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <!-- Font Awesome -->  
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <!-- My styles -->
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript" src='/custom/js/customSocket.js'></script>  
+    <style>
+        .unavailable{
+            display:none;
+        }
+        .request.unavailable{
+            display:inherit;
+             pointer-events: none;
+        }
+      
+    </style>
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    {{{body}}}
+      {{{_sections.Menu}}}
+      
+      {{{body}}}
       
 
 
@@ -77,5 +51,23 @@
     <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script> 
+//        http://stackoverflow.com/questions/1070760/javascript-function-in-href-vs-onclick
+        $('.request').click( function(e) {
+            e.preventDefault();
+            /*your_code_here;*/
+            location.href = '/request/' + this.href.slice(22) ; 
+            return false; } );
+        $('.btn-success').click( function(e) {
+            e.preventDefault();
+            /*your_code_here;*/
+            location.href = '/accept/' + this.id.slice(2) ; 
+            return false; } );    
+        $('.btn-danger').click( function(e) {
+            e.preventDefault();
+            /*your_code_here;*/
+            location.href = '/reject/' + this.id.slice(2) ; 
+            return false; } ); 
+    </script>
   </body>
 </html>
