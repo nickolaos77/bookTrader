@@ -9,7 +9,7 @@
 9. heroku apps:rename newname
 10.git push heroku master
 11.to remove files that you added by accident before commiting them: git reset
-12.
+12.set environmental variables heroku config:set MONGOLAB_URI=mongodb://username:password@ds01316.mlab.com:1316/food
 
 
 and then git commit, git push and git push heroku

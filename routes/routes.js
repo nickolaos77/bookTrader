@@ -79,7 +79,7 @@ But it would probably be better to do this directly in Mongoose by using Model.f
 The docs you link to are for findAndModify in the MongoDB shell, where the option is also named new. Very confusing.*/
 
 router.post('/updateProfile',middleware.isLoggedInGen, (req,res)=>{
-    myApp.db.collection('users').findOneAndUpdate({_id:req.user._id},{$set:{city:req.body.city, country:req.body.country}}, {returnOriginal : false}, function(err, user){
+    myApp.db.collection('users').findOneAndUpdate({_id:req.user._id},{$set:{city:req.body.city, country:req.body.country, fullName:req.body.fullName}}, {returnOriginal : false}, function(err, user){
         if (err) console.log(err)
         res.send(user)
         })

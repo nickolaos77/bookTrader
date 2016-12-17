@@ -10,6 +10,7 @@ var  User      = new Schema({
      password              : String,
      city                  : String,
      country               : String,
+     fullName              : String,
      books                 : [],
      usertradeReq          : [],
      tradeRequestsforUser  : []
